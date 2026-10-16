@@ -802,11 +802,11 @@ namespace dps
 		oapiWriteScenario_string(scn, "FLAGS2", cbuf);
 		sprintf_s(cbuf, 256, "%lf %lf %lf %d %lf %lf %lf %lf %d %d", PLOS_C.x, PLOS_C.y, PLOS_C.z, TGT_ID_C, TGPOS_C.x, TGPOS_C.y, TGPOS_C.z, OMICRON_C, THREE_AXIS_C, OPT_PROC);
 		oapiWriteScenario_string(scn, "ACTIVEMANEUVER1", cbuf);
-		sprintf_s(cbuf, 256, "%lf %lf %lf %lf %lf %lf %lf %lf %lf %lf", Q_MNVRC_S, Q_MNVRC_V.x, Q_MNVRC_V.y, Q_MNVRC_V.z, ROTR_RATE_C, Q_BODC_M50_S, Q_BODC_M50_V.x, Q_BODC_M50_V.y, Q_BODC_M50_V.z, GMTS_C);
+		sprintf_s(cbuf, 256, "%.9lf %.9lf %.9lf %.9lf %lf %.9lf %.9lf %.9lf %.9lf %lf", Q_MNVRC_S, Q_MNVRC_V.x, Q_MNVRC_V.y, Q_MNVRC_V.z, ROTR_RATE_C, Q_BODC_M50_S, Q_BODC_M50_V.x, Q_BODC_M50_V.y, Q_BODC_M50_V.z, GMTS_C);
 		oapiWriteScenario_string(scn, "ACTIVEMANEUVER2", cbuf);
-		sprintf_s(cbuf, 256, "%lf %lf %lf %lf %lf %lf %lf %lf %lf %lf %lf %lf", MNVR_CMPL_TIME, GMTS, Q_MNVR_S, Q_MNVR_V.x, Q_MNVR_V.y, Q_MNVR_V.z, PLOS.x, PLOS.y, PLOS.z, TGPOS.x, TGPOS.y, TGPOS.z);
+		sprintf_s(cbuf, 256, "%lf %lf %.9lf %.9lf %.9lf %.9lf %lf %lf %lf %lf %lf %lf", MNVR_CMPL_TIME, GMTS, Q_MNVR_S, Q_MNVR_V.x, Q_MNVR_V.y, Q_MNVR_V.z, PLOS.x, PLOS.y, PLOS.z, TGPOS.x, TGPOS.y, TGPOS.z);
 		oapiWriteScenario_string(scn, "FUTUREMANEUVER", cbuf);
-		sprintf_s(cbuf, 256, "%lf %lf %lf %lf", Q_RBOD_M50_S, Q_RBOD_M50_V.x, Q_RBOD_M50_V.y, Q_RBOD_M50_V.z);
+		sprintf_s(cbuf, 256, "%.9lf %.9lf %.9lf %.9lf", Q_RBOD_M50_S, Q_RBOD_M50_V.x, Q_RBOD_M50_V.y, Q_RBOD_M50_V.z);
 		oapiWriteScenario_string(scn, "Q_RBOD_M50", cbuf);
 		oapiWriteScenario_vec(scn, "REQD_BRATE", REQD_BRATE);
 		oapiWriteScenario_float(scn, "GMTR", GMTR);
